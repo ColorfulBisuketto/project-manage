@@ -9,7 +9,8 @@ export default function Home() {
           <Link href={post.slug}>
             <h1>{post.title}</h1>
           </Link>
-          {post.description && <p>{post.description}</p>}
+          <Mdx code={post.description} />
+          {post.description && <Mdx code={post.description} />}
         </article>
       ))}
     </div>
