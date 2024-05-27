@@ -1,5 +1,6 @@
 import { allPosts } from "@/.contentlayer/generated"
 import Link from "next/link"
+import { Mdx } from "@/components/mdx-components"
 
 export default function Home() {
   return (
@@ -9,7 +10,6 @@ export default function Home() {
           <Link href={post.slug}>
             <h1>{post.title}</h1>
           </Link>
-          <Mdx code={post.description} />
           {post.description && <Mdx code={post.description} />}
         </article>
       ))}
